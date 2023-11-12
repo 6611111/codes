@@ -1,0 +1,10 @@
+class Solution:
+    def maximizeSum(self, nums: List[int], k: int) -> int:
+        s=0
+        n=len(nums)
+        nums.sort()
+        for i in range(k):
+            c=nums[n-1]
+            s+=c
+            nums[n-1]=c+1
+        return s
